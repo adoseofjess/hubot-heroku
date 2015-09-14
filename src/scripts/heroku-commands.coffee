@@ -144,8 +144,6 @@ module.exports = (robot) ->
     dynoName = msg.match[2]
     dynoNameText = if dynoName then ' '+dynoName else ''
 
-    return unless auth(msg, appName)
-
     msg.reply "Telling Heroku to restart #{appName}#{dynoNameText}"
 
     unless dynoName
